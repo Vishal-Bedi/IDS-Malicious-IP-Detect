@@ -132,7 +132,7 @@ def virustotal():
 	virus()
 		#except:
 def virus():	
-	vt = virustotal2.VirusTotal2("e365e0baf907ee227ef77dab8f32834f2282d6cb422354e93c33d8d76425e57f")
+	vt = virustotal2.VirusTotal2("#INSERT_API_KEY_HERE#")
 		
 	#try:
 	file4 = open("test.txt", "r")
@@ -162,7 +162,7 @@ def virus():
 
 
 def googleapi(ip):
-	key = 'AIzaSyCfW4YQy_zWLdpoEY_jFnx0p5J3T8VWUK0'
+	key = '#INSERT_API_KEY_HERE#'
 	URL = "https://sb-ssl.google.com/safebrowsing/api/lookup?client=api&apikey={key}&appver=1.0&pver=3.0&url={url}"
 
 
