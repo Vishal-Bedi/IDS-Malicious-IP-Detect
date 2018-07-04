@@ -130,11 +130,11 @@ def virustotal():
        	   		file3.write("\n")
 	   			
 	virus()
-		#except:
+		
 def virus():	
 	vt = virustotal2.VirusTotal2("#INSERT_API_KEY_HERE#")
 		
-	#try:
+	
 	file4 = open("test.txt", "r")
 	for ip in file4.readlines():
 		ip = ip.rstrip()
@@ -142,29 +142,21 @@ def virus():
 		file3 = open("malwaredomains.txt", "r")
 		for ips in file3.readlines():
 			ips = ips.rstrip()
-			
-		#print ips	
+				
 		if ip == ips:
 					
-		#try:
 			ip_report = vt.retrieve(ip)   #get the VT IP report for this IP
-		#except:
-			#print "API error: on ip " + ip
 			total_pos = sum([u["positives"] for u in ip_report.detected_urls])
 			total_scan = sum([u["total"] for u in ip_report.detected_urls])
 			count = len(ip_report.detected_urls)
 			print str(count)+" URLs hosted on "+ip+" are called malicious by (on average) " + \
 	      		str(int(total_pos/count)) + " / " + str(int(total_scan/count)) + " scanners"		
 			ipgeolocate(ips)
-	#except:
-	#	print "lol"
-
 
 
 def googleapi(ip):
 	key = '#INSERT_API_KEY_HERE#'
 	URL = "https://sb-ssl.google.com/safebrowsing/api/lookup?client=api&apikey={key}&appver=1.0&pver=3.0&url={url}"
-
 
 	def safeip(key, url):
     		response = requests.get(URL.format(key=key, url=url))
@@ -174,14 +166,9 @@ def googleapi(ip):
 	return TrueorFalse
 
 
-
-
 def ipgeolocate(ip):
 
-
 	print ip
-
-
 	def extremeiplookup():
 			
 			url = 'https://extreme-ip-lookup.com/json/' + ip
