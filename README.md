@@ -1,8 +1,8 @@
 # IDS-Malicious-IP-Detect
 
 1.	Prerequisites: 
-•	virustotal2 library
-•	Python2 
+•	virustotal2 library.
+•	Python2.
 
 2.	Working:
 •	The script extracts IP addresses from a IDS Alert log file provided by the user. 
