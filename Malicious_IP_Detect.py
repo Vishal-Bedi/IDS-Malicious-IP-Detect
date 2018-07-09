@@ -39,7 +39,7 @@ def storeip(): #Extract only ip addresses from the snort alert logs and store th
 			try:
 				file2 = open("test.txt", "a")
 			except:	
-				print "1"
+				print "Error: File not found."
 				sys.exit()
  			line = "".join(ip)
 	        	if line is not '':
@@ -66,7 +66,7 @@ def iterateip():#Parsing through the file containing the extracted IP addresses
 	try:
 	        file2 = open(storedips, "r")
 	except:
-		print "2"
+		print "Error: File not found."
 		sys.exit()
 	ipaddress = get_ip_address('eth0') #Get IP address of current system
 	file2 = open(storedips, "r")
