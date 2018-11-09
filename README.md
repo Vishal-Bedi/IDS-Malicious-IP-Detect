@@ -10,4 +10,4 @@
 •	It also checks the IP addresses against the list provided by malwaredomainlist.com.
 •	Any Malicious IP's are then reported back to the user.
  
-Co-Owner: https://github.com/amshusky18
+
